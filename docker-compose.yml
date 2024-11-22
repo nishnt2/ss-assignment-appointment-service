@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  appointment-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3002:3002"
+    container_name: appointment-service
